@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.wy.ges.DashboardController">
+   <left>
+      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="150.0" style="-fx-background-color: #1d6f42;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="ivUser" fitHeight="129.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="true">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin></ImageView>
+            <Label fx:id="labelID" text="User ID: XXX" textFill="WHITE" />
+            <Button fx:id="btnMain" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnMainClick" onMouseEntered="#btnMainHover" onMouseExited="#btnMainExit" style="-fx-background-color: transparent;" text="Main Page" textFill="WHITE">
+               <VBox.margin>
+                  <Insets bottom="4.0" top="30.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Verdana" size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnClassroom" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnClassroomClick" onMouseEntered="#btnClassroomHover" onMouseExited="#btnClassroomExit" style="-fx-background-color: transparent;" text="Class" textFill="WHITE">
+               <font>
+                  <Font name="Verdana" size="16.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="4.0" />
+               </VBox.margin></Button>
+            <Button fx:id="btnAssessment" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnAssessmentClick" onMouseEntered="#btnAssessmentHover" onMouseExited="#btnAssessmentExit" style="-fx-background-color: transparent;" text="Assessment" textFill="WHITE">
+               <font>
+                  <Font name="Verdana" size="16.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="4.0" />
+               </VBox.margin></Button>
+            <Button fx:id="btnSettings" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnSettingsClick" onMouseEntered="#btnSettingsHover" onMouseExited="#btnSettingsExit" style="-fx-background-color: transparent;" text="Settings" textFill="WHITE">
+               <font>
+                  <Font name="Verdana" size="16.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="4.0" />
+               </VBox.margin></Button>
+            <Button fx:id="btnLogout" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#logout" onMouseEntered="#btnLogoutHover" onMouseExited="#btnLogoutExit" style="-fx-background-color: transparent;" text="Log Out" textFill="WHITE">
+               <font>
+                  <Font name="Verdana" size="16.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="4.0" />
+               </VBox.margin></Button>
+            <Button fx:id="btnQuit" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#quit" onMouseEntered="#btnQuitHover" onMouseExited="#btnQuitExit" style="-fx-background-color: transparent;" text="Quit" textFill="WHITE">
+               <font>
+                  <Font name="Verdana" size="16.0" />
+               </font></Button>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="600.0" fitWidth="855.0" opacity="0.7" pickOnBounds="true">
+                     <image>
+                        <Image url="@img/mcm_background.jpg" />
+                     </image>
+                  </ImageView>
+                  <AnchorPane fx:id="pageMain" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <center>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Pane opacity="0.74" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                    <Pane layoutX="18.0" layoutY="312.0" prefHeight="275.0" prefWidth="395.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-border-color: black; -fx-border-radius: 10;">
+                                       <children>
+                                          <Label alignment="CENTER" layoutX="24.0" layoutY="14.0" prefHeight="28.0" prefWidth="353.0" text="Students doing well" textFill="#068a1a">
+                                             <font>
+                                                <Font name="Verdana Bold" size="22.0" />
+                                             </font>
+                                          </Label>
+                                          <TableView fx:id="tableWell" layoutX="19.0" layoutY="61.0" prefHeight="200.0" prefWidth="357.0">
+                                            <columns>
+                                              <TableColumn prefWidth="75.0" text="C1" />
+                                              <TableColumn prefWidth="75.0" text="C2" />
+                                            </columns>
+                                          </TableView>
+                                       </children>
+                                    </Pane>
+                                    <Pane layoutX="443.0" layoutY="312.0" prefHeight="275.0" prefWidth="395.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-border-color: black; -fx-border-radius: 10;">
+                                       <children>
+                                          <Label alignment="CENTER" layoutX="5.0" layoutY="14.0" prefHeight="17.0" prefWidth="386.0" text="Students not doing well" textFill="#c30c0c">
+                                             <font>
+                                                <Font name="Verdana Bold" size="22.0" />
+                                             </font>
+                                          </Label>
+                                          <TableView fx:id="tableNotWell" layoutX="21.0" layoutY="61.0" prefHeight="200.0" prefWidth="357.0">
+                                             <columns>
+                                                <TableColumn prefWidth="75.0" text="C1" />
+                                                <TableColumn prefWidth="75.0" text="C2" />
+                                             </columns>
+                                          </TableView>
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </AnchorPane>
+                           </center></BorderPane>
+                     </children></AnchorPane>
+                  <AnchorPane fx:id="pageAssessment" prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <top>
+                              <HBox prefWidth="200.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Label fx:id="labelAssessmentClassroom" text="Classroom:  ">
+                                       <HBox.margin>
+                                          <Insets left="5.0" right="10.0" top="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <ChoiceBox fx:id="choiceAssessmentClassrooms" prefWidth="150.0">
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                    </ChoiceBox>
+                                    <Button fx:id="btnAddAssessment" mnemonicParsing="false" onAction="#btnAddAssessmentClick" prefWidth="124.0" text="Add Assessment">
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Button fx:id="btnEditAssessment" mnemonicParsing="false" onAction="#btnEditAssessmentClick" prefWidth="124.0" text="Edit Assessment">
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Button fx:id="btnDeleteAssessment" mnemonicParsing="false" onAction="#btnDeleteAssessmentClick" text="Delete Assessment" />
+                                 </children>
+                              </HBox>
+                           </top>
+                           <center>
+                              <TableView fx:id="tableAssessments" opacity="0.8" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                <columns>
+                                  <TableColumn prefWidth="75.0" text="C1" />
+                                  <TableColumn prefWidth="75.0" text="C2" />
+                                </columns>
+                              </TableView>
+                           </center></BorderPane>
+                     </children></AnchorPane>
+                  <AnchorPane fx:id="pageStudent" prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <top>
+                              <HBox prefWidth="200.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Label fx:id="labelClassroom" prefHeight="17.0" text="Classroom:">
+                                       <HBox.margin>
+                                          <Insets left="5.0" right="10.0" top="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <ChoiceBox fx:id="choiceClassrooms" prefWidth="150.0">
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                    </ChoiceBox>
+                                    <Button fx:id="btnAddStudent" mnemonicParsing="false" onAction="#btnAddStudentClick" text="Add Student">
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Button fx:id="btnEditStudent" mnemonicParsing="false" onAction="#btnEditStudentClick" text="Edit Student">
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Button fx:id="btnDeleteStudent" mnemonicParsing="false" onAction="#btnDeleteStudentClick" text="Delete Student">
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Button fx:id="btnRefreshRes" mnemonicParsing="false" onAction="#btnRefreshResClick" text="Refresh">
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Button fx:id="btnViewReport" mnemonicParsing="false" onAction="#btnViewReportClick" text="View Report">
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Button fx:id="btnBack" mnemonicParsing="false" onAction="#btnBackClick" text="Back" />
+                                 </children>
+                              </HBox>
+                           </top>
+                           <center>
+                              <TableView fx:id="tableStudents" opacity="0.8" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                <columns>
+                                  <TableColumn prefWidth="75.0" text="C1" />
+                                  <TableColumn prefWidth="75.0" text="C2" />
+                                </columns>
+                              </TableView>
+                           </center></BorderPane>
+                     </children></AnchorPane>
+                  <AnchorPane fx:id="pageSettings" prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <center>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Pane opacity="0.74" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                    <Button fx:id="btnAddNewUser" layoutX="660.0" layoutY="39.0" mnemonicParsing="false" onAction="#btnAddNewUserClick" prefWidth="145.0" text="Add new user">
+                                       <font>
+                                          <Font name="Verdana" size="14.0" />
+                                       </font>
+                                    </Button>
+                                    <Label layoutX="73.0" layoutY="33.0" text="Add new user">
+                                       <font>
+                                          <Font name="Verdana" size="30.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="73.0" layoutY="74.0" text="Add a new teacher account. This teacher account will have its own classroom and students" />
+                                    <Button fx:id="btnChangePassword" layoutX="660.0" layoutY="119.0" mnemonicParsing="false" onAction="#btnChangePasswordClick" text="Change password">
+                                       <font>
+                                          <Font name="Verdana" size="14.0" />
+                                       </font>
+                                    </Button>
+                                    <Label layoutX="74.0" layoutY="111.0" text="Change password">
+                                       <font>
+                                          <Font name="Verdana" size="30.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="74.0" layoutY="152.0" text="Change this account's password. Requires old password for authorization" />
+                                    <Separator layoutX="69.0" layoutY="103.0" prefHeight="0.0" prefWidth="760.0" style="-fx-background-color: black;" />
+                                    <Button fx:id="btnUploadImg" layoutX="660.0" layoutY="198.0" mnemonicParsing="false" onAction="#btnUploadImgClick" prefWidth="145.0" text="Upload Image">
+                                       <font>
+                                          <Font name="Verdana" size="14.0" />
+                                       </font>
+                                    </Button>
+                                    <Label layoutX="74.0" layoutY="190.0" text="Upload Image">
+                                       <font>
+                                          <Font name="Verdana" size="30.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="74.0" layoutY="231.0" text="Upload an image for this account. Only .jpg files are accepted" />
+                                    <Separator layoutX="69.0" layoutY="182.0" prefHeight="0.0" prefWidth="760.0" style="-fx-background-color: black;" />
+                                 </children>
+                              </AnchorPane>
+                           </center></BorderPane>
+                     </children></AnchorPane>
+                  <AnchorPane fx:id="pageClassroom" prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <top>
+                              <HBox prefWidth="200.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Button fx:id="btnAddClassroom" mnemonicParsing="false" onAction="#btnAddClassroomClick" text="Add">
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Button fx:id="btnEditClassroom" mnemonicParsing="false" onAction="#btnEditClassroomClick" text="Edit">
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Button fx:id="btnDeleteClassroom" mnemonicParsing="false" onAction="#btnDeleteClassroomClick" text="Delete">
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin></Button>
+                                    <Button fx:id="btnViewStudents" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnViewStudentsClick" text="View Students" />
+                                 </children>
+                              </HBox>
+                           </top>
+                           <center>
+                              <TableView fx:id="tableClassroom" opacity="0.8" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                <columns>
+                                  <TableColumn prefWidth="75.0" text="C1" />
+                                  <TableColumn prefWidth="75.0" text="C2" />
+                                </columns>
+                              </TableView>
+                           </center></BorderPane>
+                     </children></AnchorPane>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </center>
+</BorderPane>

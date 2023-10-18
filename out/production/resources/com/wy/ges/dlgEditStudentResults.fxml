@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="283.0" prefWidth="374.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.wy.ges.DlgEditStudentResultsController">
+   <children>
+      <TextField fx:id="inputName" disable="true" editable="false" layoutX="107.0" layoutY="63.0" text="fdas" />
+      <TextField fx:id="inputScore" layoutX="148.0" layoutY="105.0" prefHeight="27.0" prefWidth="79.0" />
+      <Label layoutX="107.0" layoutY="36.0" text="Student Name" />
+      <Label layoutX="107.0" layoutY="110.0" text="Score" />
+      <TextField fx:id="inputGrade" layoutX="148.0" layoutY="137.0" prefHeight="27.0" prefWidth="79.0" />
+      <Button fx:id="btnSave" cancelButton="true" layoutX="137.0" layoutY="224.0" minHeight="27.0" minWidth="57.0" mnemonicParsing="false" onAction="#btnSaveClick" text="Save and Close" />
+      <Label layoutX="105.0" layoutY="142.0" text="Grade:" />
+      <Button layoutX="227.0" layoutY="105.0" mnemonicParsing="false" onAction="#calcScore" text="Calc" />
+      <Button layoutX="227.0" layoutY="137.0" mnemonicParsing="false" onAction="#calcGrade" text="Calc" />
+      <Label layoutX="106.0" layoutY="175.0" text="Percentage" />
+      <TextField fx:id="inputPercentage" layoutX="175.0" layoutY="170.0" prefHeight="27.0" prefWidth="79.0" />
+      <Button fx:id="btnPrev" layoutX="16.0" layoutY="224.0" minHeight="27.0" minWidth="57.0" mnemonicParsing="false" onAction="#btnPrevClick" text="Previous" />
+      <Button fx:id="btnNext" defaultButton="true" layoutX="303.0" layoutY="224.0" minHeight="27.0" minWidth="57.0" mnemonicParsing="false" onAction="#btnNextClick" text="Next" />
+      <Label layoutX="258.0" layoutY="175.0" text="\%" />
+   </children>
+</AnchorPane>

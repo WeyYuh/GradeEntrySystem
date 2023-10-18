@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="380.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.wy.ges.DlgAddNewUserController">
+   <children>
+      <Label layoutX="66.0" layoutY="33.0" prefHeight="17.0" prefWidth="67.0" text="Username" />
+      <TextField fx:id="inputUsername" layoutX="66.0" layoutY="64.0" prefHeight="27.0" prefWidth="212.0" />
+      <PasswordField fx:id="inputPassword" layoutX="66.0" layoutY="128.0" prefHeight="27.0" prefWidth="212.0" />
+      <PasswordField fx:id="inputConfirmPassword" layoutX="66.0" layoutY="192.0" prefHeight="27.0" prefWidth="212.0" />
+      <TextField fx:id="inputEmail" layoutX="66.0" layoutY="256.0" prefHeight="27.0" prefWidth="212.0" />
+      <Label layoutX="66.0" layoutY="161.0" text="Confirmed Password" />
+      <Label layoutX="66.0" layoutY="97.0" prefHeight="17.0" prefWidth="67.0" text="Password" />
+      <Label layoutX="66.0" layoutY="225.0" text="Email" />
+      <Button fx:id="btnCancel" cancelButton="true" layoutX="66.0" layoutY="318.0" mnemonicParsing="false" onAction="#btnCancelClick" text="Cancel" />
+      <Button fx:id="btnSave" defaultButton="true" layoutX="221.0" layoutY="318.0" mnemonicParsing="false" onAction="#btnSaveClick" prefHeight="27.0" prefWidth="57.0" text="Save" />
+      <Label fx:id="labelUsernameEmpty" layoutX="67.0" layoutY="48.0" prefHeight="17.0" prefWidth="268.0" text="Username cannot be empty" textFill="RED">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="124.0" layoutY="33.0" text="*" textFill="RED" />
+      <Label fx:id="labelPasswordEmpty" layoutX="67.0" layoutY="112.0" prefHeight="17.0" prefWidth="268.0" text="Password cannot be empty" textFill="RED">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="121.0" layoutY="96.0" text="*" textFill="RED" />
+      <Label layoutX="181.0" layoutY="160.0" text="*" textFill="RED" />
+      <Label fx:id="labelConfirmUnmatched" layoutX="67.0" layoutY="176.0" prefHeight="17.0" prefWidth="268.0" text="Confirmed password and Password not matched" textFill="RED">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="97.0" layoutY="224.0" text="*" textFill="RED" />
+      <Label fx:id="labelEmailEmpty" layoutX="67.0" layoutY="240.0" prefHeight="17.0" prefWidth="268.0" text="Email cannot be empty" textFill="RED">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelError" alignment="CENTER" layoutX="25.0" layoutY="294.0" prefHeight="17.0" prefWidth="301.0" textFill="RED" />
+   </children>
+</AnchorPane>
